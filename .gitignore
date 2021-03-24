@@ -105,5 +105,5 @@ dist
 
 
 # My other files
-.releasePorts
-.stack
+releasePorts
+stack
