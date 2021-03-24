@@ -1,0 +1,27 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "docker",
+  "database": "catalog",
+  "synchronize": false,
+  "logging": false,
+  "options": {
+     "encrypt": true,
+     "enableArithAbort": true,
+     "trustedConnection": true,
+     "cryptoCredentialsDetails": {
+        "minVersion": "TLSv1"
+      }
+  },
+  "entities": [
+     "src/models/**/*.ts"
+  ],
+  "migrations": [
+     "src/database/migrations/**/*.ts"
+  ],
+  "cli": {
+     "migrationsDir": "src/database/migrations"
+  }
+}

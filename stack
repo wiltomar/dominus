@@ -1,0 +1,23 @@
+Projeto dominus ERP, stack completa em JS
+
+Backend  
+	* Node          - Interpretador JS assíncrono para desenvolvimento server-side
+	* Express       - Middleware JavaScript para construção de apps web com Node
+	* Sequelize     - ORM baseado em promise para Node com suporte a vários DBs
+	* Redis         - Armazenamento de estrutura de dados chave-valor em memória
+	* Cors          - É uma tecnologia de navegadores que define meios para um servidor permitir que seus recursos sejam acessados por uma página de um domínio diferente
+	* Dotenv        - Gerenciamento de variáveis de ambiente em Node (Ferramenta utilizada para orquestrar as variáveis de ambiente de um projeto)
+	* JWT		- Ferramenta para tokenização e segurança da API
+	* Swagger	- Ferramenta destinada a documentação da API seus métodos, rotas e etc
+
+Database
+	* PostgreSQL
+
+Frontend
+	* React		- Lib necessária para o desenvolvimento da interface web do aplicativo cliente
+	* React Native	- Lib utilizada para o desenvolvimento da interface móvel do aplicativo cliente
+	* Ant Design	- Utilizada com o objetivo de ganho de performance junto ao React/React Native, possibilitando incremento de recursos como a internacionalização da aplicação
+	
+Observação
+    * Se optar por usar o TypeScript em conjunto com a Stack principal, trocar o Sequelize pelo TypeORM se fará necessário.
+
