@@ -67,5 +67,5 @@ const credentials = {
 };
 
 https.createServer(credentials, app).listen(serverPort, () => {
-  console.log(`🚀 Listening on ${serverName}:${serverPort}`);
+  console.log(`🚀 - Listening on ${serverName}:${serverPort}`);
 });

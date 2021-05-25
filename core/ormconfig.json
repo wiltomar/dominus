@@ -16,12 +16,13 @@
       }
   },
   "entities": [
-     "src/models/**/*.ts"
+     "src/common/models/**/*.ts",
+     "src/public/models/**/*.ts"
   ],
   "migrations": [
-     "src/database/migrations/**/*.ts"
+     "src/common/database/migrations/**/*.ts"
   ],
   "cli": {
-     "migrationsDir": "src/database/migrations"
+     "migrationsDir": "src/common/database/migrations"
   }
 }

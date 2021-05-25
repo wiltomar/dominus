@@ -1,6 +1,6 @@
 import { Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, BeforeInsert, BeforeUpdate, BaseEntity } from 'typeorm';
 
-class Base extends BaseEntity {
+abstract class Base {
   @PrimaryGeneratedColumn('uuid')
   uuid: string;
 
@@ -10,16 +10,15 @@ class Base extends BaseEntity {
   @UpdateDateColumn()
   updatedat: Date;
 
-  @Column()
+  @Column('tymestamp with timezone')
   deletedat: Date;
   
-  @Column()
+  @Column({ default: true })
   status: boolean;
   
   @BeforeInsert()
   setCreatedat(): void {
     this.createdat = new Date();
-    this.status = true;
   }
 
   @BeforeUpdate()

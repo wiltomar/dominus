@@ -1,0 +1,31 @@
+1. Method one
+
+openssl genrsa 2048 > dominus.key
+chmod 400 dominus.key
+openssl req -new -x509 -nodes -sha256 -days 365 -key dominus.key -out dominus.crt
+
+
+
+2. Method two
+
+openssl req -new -newkey rsa:1024 -nodes -out ca.csr -keyout ca.key
+openssl x509 -trustout -signkey ca.key -days 365 -req -in -ca.csr -out ca.pem
+
+
+
+3. Method three
+
+openssl genrsa -out dominus.key 1024
+openssl req -new -key dominus.key -out dominus.csr
+openssl ca -in dominus.csr -out dominus.cer
+
+
+4. Method four (Finally method)
+
+openssl genrsa -des3 -out dominus.key 2048
+openssl req -new -x509 -days 3650 -key dominus.key -out dominus.crt
+
+4.1. Method to create a server certificate
+openssl genrsa -des3 -out server.key 2048
+openssl req -new -key server.key -out server.csr
+openssl x509 -req 365 -in server.csr -CA dominus.crt -CAkey dominus.key -set_serial 27032021 -out server.crt

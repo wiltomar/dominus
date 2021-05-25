@@ -1,9 +1,9 @@
 declare namespace Express {
   export interface Request {
-    uuid: string;
+    uuid: uuid;
   }
 
   export interface Response {
-    uuid: string;
+    uuid: uuid;
   }
 }
